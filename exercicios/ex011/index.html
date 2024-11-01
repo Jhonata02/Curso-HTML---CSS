@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML</title>
+</head>
+<body>
+    <h1>Imagem dinamica</h1>
+    <p>tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    
+    <picture>
+        <!-- source serve para carregar imagens de acordo com o tamanho da tela e temos que obedecer a ordem do menor para o maior-->
+        <source media="(max-width: 750px)" srcset="imagens/macaquinho_pequeno.jpeg"> <!-- caso o usuario tenha um navegador com a tela menor que 750px ele vai carregar a imagem pequena -->
+        <source media="(max-width: 1050px)" srcset="imagens/macaquinho_medio.jpeg"><!-- caso o usuario tenha um navegador com a tela menor que 1050px e maior que 750px ele vai carregar a imagem media -->
+        <img src="imagens/macaquinho_grande.jpeg" alt="macaquinho triste"><!-- caso o usuario tenha um navegador com a tela maior que 1050px ele vai carregar a imagem grande -->
+    </picture>
+    <h1>Colocando uma musiquinha no site</h1>
+    <h3>Mendley Canoa</h3>
+    <audio preload="metadata" controls>
+        <source src="midia/01 - Medley Canoa.mp3" type="audio/mpeg">
+        <source src="midia/01 - Medley Canoa.ogg" type="audio/ogg">
+        <source src="midia/01 - Medley Canoa.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir o audio <a href="midea/01 - Medley Canoa.mp3" download="01 - Medley Canoa.mp3"> clique aqui para baixar</a></p>
+    </audio>
+    <br><br>
+    <h3>Nattan e Léo Foguete</h3>
+    <video controls poster="imagens/macaquinho_grande.jpeg" width="500px" height="300px"><!-- poster serve para colocar uma imagem de capa do video-->
+        <source src="midia/Nattan e Léo Foguete - Última Noite.mp4" type="video/mp4">
+    </video>
+
+    <h1>Inserindo videos do youtube(videos de hospedagem externas)</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/To7M0zpF4gU?si=ZCPb3KwH0qeR0h6u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><!-- basta ir no youtube, apertar em compartilhar, depois em incorporar e copiar la e colar aqui-->
+
+</body>
+</html>
